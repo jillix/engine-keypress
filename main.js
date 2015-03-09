@@ -1,5 +1,5 @@
 // Dependencies
-var wkeypress = require("./keypress");
+var wkeypress = require("./wkeypress");
 
 /**
  * init
@@ -15,7 +15,7 @@ exports.init = function () {
         wkeypress(c.k, c.c, function (e) {
             var foo = E.path(c.f, [window, self]);
             if (typeof foo === "function") {
-                foo.call(self, c.args);
+                foo.apply(self, c.args);
             }
         });
     });
