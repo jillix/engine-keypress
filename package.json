@@ -1,0 +1,23 @@
+{
+  "name": "engine-keypress",
+  "version": "1.0.0",
+  "description": "Tiny keypress module for Engine.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jillix/engine-keypress.git"
+  },
+  "keywords": [
+    "jxengine",
+    "keypress"
+  ],
+  "author": "jillix <contact@jillix.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jillix/engine-keypress/issues"
+  },
+  "homepage": "https://github.com/jillix/engine-keypress"
+}
