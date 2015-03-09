@@ -10,11 +10,12 @@ var wkeypress = require("./keypress");
  */
 exports.init = function () {
     var conf = this._config;
+    var self = this;
     (conf.shortcuts = conf.shortcuts || []).forEach(function (c) {
-        wkeypress(c.c, c.k, function (e) {
-            var foo = E.path(c.f, [window]);
+        wkeypress(c.k, c.c, function (e) {
+            var foo = E.path(c.f, [window, self]);
             if (typeof foo === "function") {
-                foo(e);
+                foo.call(self, c.args);
             }
         });
     });
