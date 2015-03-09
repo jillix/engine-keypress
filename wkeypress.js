@@ -15,7 +15,8 @@
     var _handlers = {
         chars: {},
         shift: {},
-        ctrl: {}
+        ctrl: {},
+        alt: {}
     };
 
     function wkeypress (chr, key, callback) {
@@ -45,6 +46,8 @@
             clbk(callbacks.ctrl, this, [e]);
         } else if (e.shiftKey) {
             clbk(callbacks.shift, this, [e]);
+        } else if (e.altKey) {
+            clbk(callbacks.alt, this, [e]);
         } else {
             clbk(callbacks.chars, this, [e]);
         }
