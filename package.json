@@ -1,6 +1,6 @@
 {
   "name": "engine-keypress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny keypress module for Engine.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,18 +25,19 @@
     "url": "https://github.com/jillix/engine-keypress/issues"
   },
   "engine": {
-      "ex_config": {
-          "shortcuts": [
-            {
-              "k": 66,
-              "c": "ctrl",
-              "f": "someMethod",
-              "args": [
-                "arg1", "arg2"
-              ]
-            }
+    "ex_config": {
+      "shortcuts": [
+        {
+          "k": 66,
+          "c": "ctrl",
+          "f": "someMethod",
+          "args": [
+            "arg1",
+            "arg2"
           ]
-      }
+        }
+      ]
+    }
   },
   "homepage": "https://github.com/jillix/engine-keypress"
 }
