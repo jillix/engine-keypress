@@ -7,8 +7,8 @@
   },
   "components": {
     "scripts": [
-      "main.js",
-      "wkeypress.js"
+      "client/index.js",
+      "client/wkeypress.js"
     ]
   },
   "repository": {
