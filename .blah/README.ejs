@@ -13,9 +13,11 @@
 <!-- * * * Thanks! * * *                                                    -->
 <!---------------------------------------------------------------------------->
 
-# engine-keypress
-Tiny keypress module for Engine.
 
+# <%= _.pack.name %>
+<%= _.pack.description %>
+
+<% // INSTALLATION %>
 ## Configuration
 The `shortcuts` array contains objects in the following format:
 
@@ -25,19 +27,7 @@ The `shortcuts` array contains objects in the following format:
  - `args` (Array): The function arguments.
 
 ```json
-{
-    "shortcuts": [
-        {
-            "k": 66,
-            "c": "ctrl",
-            "f": "someMethod",
-            "args": [
-                "arg1",
-                "arg2"
-            ]
-        }
-    ]
-}
+<%- JSON.stringify(_.pack.engine.ex_config, null, 4) %>
 ```
 
 ## Events
@@ -46,12 +36,16 @@ the shortcuts array (using the `emit` function, like in the example).
 
 The module does not listen to any events.
 
+
+<% // How to contribute %>
 ## How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
+<% // License information %>
 ## License
 See the [LICENSE][license] file.
 
+<% // Links %>
 [license]: /LICENSE
 [contributing]: /CONTRIBUTING.md
 [docs]: /DOCUMENTATION.md
