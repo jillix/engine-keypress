@@ -5,11 +5,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "components": {
-    "scripts": [
-      "client/index.js",
-      "client/wkeypress.js"
-    ]
+  "composition": {
+    "client": {
+      "module": [
+        "client/index.js",
+        "client/wkeypress.js"
+      ]
+    }
   },
   "repository": {
     "type": "git",
@@ -23,21 +25,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jillix/engine-keypress/issues"
-  },
-  "engine": {
-    "ex_config": {
-      "shortcuts": [
-        {
-          "k": 66,
-          "c": "ctrl",
-          "f": "someMethod",
-          "args": [
-            "arg1",
-            "arg2"
-          ]
-        }
-      ]
-    }
   },
   "homepage": "https://github.com/jillix/engine-keypress"
 }
