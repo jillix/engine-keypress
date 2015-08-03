@@ -13,6 +13,21 @@
       ]
     }
   },
+  "engine": {
+    "ex_config": {
+      "shortcuts": [
+        {
+          "k": 66,
+          "c": "ctrl",
+          "f": "someMethod",
+          "args": [
+            "arg1",
+            "arg2"
+          ]
+        }
+      ]
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:jillix/engine-keypress.git"
