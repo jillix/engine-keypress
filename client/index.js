@@ -1,6 +1,15 @@
 // Dependencies
 var wkeypress = require("./wkeypress");
 
+function emit (eventName, data) {
+    var self = this;
+    self._streams = self._streams || {};
+
+    // create stream
+    var str = self._streams[eventName] || (self._streams[eventName] = self.flow(eventName));
+    str.write(null, data);
+}
+
 /**
  * init
  *
@@ -11,12 +20,14 @@ var wkeypress = require("./wkeypress");
 exports.init = function () {
     var conf = this._config;
     var self = this;
+    self.emit = emit;
     (conf.shortcuts = conf.shortcuts || []).forEach(function (c) {
         wkeypress(c.k, c.c, function (e) {
-            var foo = E.path(c.f, [window, self]);
-            if (typeof foo === "function") {
-                foo.apply(self, c.args);
-            }
+
+            // emit all shortcut arguments
+            (c.args = c.args || []).forEach(function (eventName) {
+                self.emit(eventName);
+            });
         });
     });
 };
